@@ -11,9 +11,13 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('articles', 'ArticleController');
+
 
 // Route::get('/articles/{index}', function ($index) {
 //    $articles = [
@@ -93,3 +97,4 @@ Route::get('/articles/{year?}/{tag?}', function ($year, $tags) {
  
     return $find;
  });
+
