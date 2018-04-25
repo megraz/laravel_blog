@@ -58,7 +58,7 @@ Route::get('/articles', function () {
 // si l'index n'existe pas ex: .../articles/9 alors rediriger vers /articles on a alors l'intégralité de l'index et non pas l'index filtré par numéro
 
 
-Route::get('/articles/{year?}/{tag?}', function ($year, $tags) {
+Route::get('/articles/{year?}/{tag?}', function ($year = null, $tags = null) {
     $articles = [
         [
             "title" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
